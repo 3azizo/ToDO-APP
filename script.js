@@ -74,6 +74,7 @@ function creatTask(name) {
     }, 700);
   });
 }
+//
 document.querySelector("#clear").addEventListener("click", function () {
   if (tasks.innerHTML !== "") {
     tasks.classList.add("clearALL");
@@ -92,3 +93,15 @@ document.addEventListener("keydown", function (e) {
     inp.value = "";
   }
 });
+//
+function getDate() {
+  let today = new Date();
+  return today.toLocaleDateString("en-us", {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+  });
+}
+// add date of today in document
+let dateToday = document.querySelector(".dateToday");
+dateToday.innerHTML = getDate();

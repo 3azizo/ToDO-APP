@@ -9,6 +9,17 @@ body {
   transition: 0.5s;
   min-height: 100vh;
 }
+.dateToday {
+  width: 100%;
+  background-color: #2e3192;
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  font-size: 25px;
+  padding: 10px;
+  font-weight: bold;
+}
 :root {
   --main-padding: 5px;
 }
@@ -30,7 +41,7 @@ section {
   display: flex;
   justify-content: space-between;
   border-radius: 4px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 #inp {
@@ -39,7 +50,13 @@ section {
   margin: 5px;
   border-radius: 4px;
   outline: none;
-  font-size: 35px;
+  font-size: 30px;
+  padding: 5px;
+  border: none;
+  caret-color: #1bffff;
+}
+#inp:focus::placeholder {
+  color: transparent;
 }
 #inp:focus {
   border: 3px solid #2e3192;
@@ -162,9 +179,6 @@ h3 {
   }
 }
 @media (max-width: 992px) {
-  .form {
-    margin-bottom: 25px;
-  }
   #inp {
     height: 30px;
     width: 100%;
@@ -181,6 +195,9 @@ h3 {
     font-size: 15px;
     padding: 1px;
     max-width: 70%;
+  }
+  .dateToday {
+    font-size: 20px;
   }
   .delete {
     width: 50px;
@@ -204,6 +221,6 @@ h3 {
   }
   100% {
     opacity: 0;
-    transform: scale(2);
+    transform: scale(1);
   }
 }
