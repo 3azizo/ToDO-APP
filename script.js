@@ -105,3 +105,7 @@ function getDate() {
 // add date of today in document
 let dateToday = document.querySelector(".dateToday");
 dateToday.innerHTML = getDate();
+//sortable
+new Sortable(tasks, {
+  Animation: 350,
+});
